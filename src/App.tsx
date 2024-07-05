@@ -12,19 +12,14 @@ function Draggable(props: { name: string; row: number; col: number; children: Re
     },
   });
 
-  const style: { color: string; transform?: string } = {
+  const style: { color: string; touchAction: string; transform?: string } = {
     color: props.name[0] == 'R' ? 'red' : 'black',
+    touchAction: 'none',
   };
 
   if (transform) {
     style['transform'] = `translate3d(${transform.x}px, ${transform.y}px, 0)`;
   }
-
-  // const style = transform
-  //   ? {
-  //       transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
-  //     }
-  //   : undefined;
 
   return (
     <button ref={setNodeRef} style={style} {...listeners} {...attributes}>
