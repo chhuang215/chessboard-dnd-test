@@ -59,7 +59,7 @@ function DroppableCell(props: { name: string; row: number; col: number; children
 function App() {
   const [eventInfo, setEventInfo] = useState('<>');
 
-  const [board, setBoard] = useState([
+  const [board, _] = useState([
     ['BG', 'BG', 'BC', 'BC', 'BN', 'BN', 'BR', 'BR'],
     ['BG', 'BG', 'BC', 'BC', 'BN', 'BN', 'BB', 'BB'],
     ['RG', 'RG', 'RC', 'RC', 'RN', 'RN', 'RR', 'RR'],
